@@ -1,4 +1,5 @@
 # golb
+JS中的事件对象中，getTime()方法用于获得当前时间对象换算的毫秒数
 获取当前时间的毫秒数：
 
     const timeNow = new Date().getTime()
