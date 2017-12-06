@@ -10,7 +10,7 @@ function extend2(Child, Parent) {
         c[i] = p[i];
     }
     c.uber = p;
-   }
+}
 ```
 
 2：将子对象的原型对象（prototype）指向父元素的实例对象
