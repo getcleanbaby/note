@@ -1,6 +1,7 @@
 ##对象的浅复制与深复制
 
 浅复制
+
 ```
 function deepCopy(p, c) {
 　　　　var c = c || {};
@@ -15,3 +16,4 @@ function deepCopy(p, c) {
 　　　　return c;
 　　}
 ```
+深复制
