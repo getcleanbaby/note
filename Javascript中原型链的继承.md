@@ -2,6 +2,15 @@
 JS中对象的继承，也就是所谓的类的继承，一般有五种方式：
 1：直接拷贝。将父对象的原型对象中的所有属性方法全部给子对象的原型拷贝一份就可以了。
 
+    function extend2(Child, Parent) {
+　　　　var p = Parent.prototype;
+　　　　var c = Child.prototype;
+　　　　for (var i in p) {
+　　　　　　c[i] = p[i];
+　　　　　　}
+　　　　c.uber = p;
+　　  }
+
 2：将子对象的原型对象（prototype）指向父元素的实例对象
 
 3：将子对象的原型对象（prototype）指向父对象的原型对象（prototype）(这种情况下，你对子对象的原型对象的更改，会污染到父对象)
