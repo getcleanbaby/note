@@ -4,11 +4,11 @@ JS中对象的继承，也就是所谓的类的继承，一般有五种方式：
 
     function extend2(Child, Parent) {
         var p = Parent.prototype;
-　　　　var c = Child.prototype;
-　　　　for (var i in p) {
+　　　   var c = Child.prototype;
+        for (var i in p) {
 　　　　　　c[i] = p[i];
 　　　　　　}
-　　　　c.uber = p;
+        c.uber = p;
     }
 
 2：将子对象的原型对象（prototype）指向父元素的实例对象
