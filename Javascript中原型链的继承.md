@@ -73,3 +73,51 @@ Cat.prototype = Animal.prototype;
 
 　　alert(cat1.species); // 动物
 ```
+...
+
+......
+
+.........
+
+写这么多看起来好头大啊。。。有没有简单点的版本？      
+
+有啊
+
+
+1. 继承他的实例对象
+
+```
+Child.prototype = new Parent();
+```
+
+2. 继承他的原型对象
+
+```
+Child.prototype = Parent.prototype;
+```
+3. 用构造函数继承他的原型对象
+
+```
+var F = function(){};
+
+F.prototype = Parent.prototype;
+
+Child.prototype = new F();
+```
+
+4. 拷贝他的原型对象
+
+```
+var p = Parent.prototype;
+var c = Child.prototype;
+for (var i in p) {
+   c[i] = p[i];
+}
+```
+
+5. 构造函数中用call或者apply
+
+```
+Parent.apply(this, arguments);
+```
+
