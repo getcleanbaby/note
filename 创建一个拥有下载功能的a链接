@@ -1,0 +1,7 @@
+这样可以直接把后台传回的链接转化为当前页面的下载文件
+
+const a = document.createElement('a')
+a.setAttribute('href', response.data.data.key)
+document.body.appendChild(a)
+a.click()
+a.style.display = 'none'
